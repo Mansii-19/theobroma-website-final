@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fff7f0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #8b4513;
+  margin-bottom: 20px;
+}
+
+#checkout-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.checkout-item {
+  display: flex;
+  gap: 15px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.checkout-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.checkout-details {
+  flex: 1;
+}
+
+.checkout-details h3 {
+  margin: 0 0 5px 0;
+}
+
+.checkout-details p {
+  margin: 3px 0;
+}
+
+.summary {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form h2 {
+  margin-bottom: 15px;
+  color: #8b4513;
+}
+
+form input, form select, form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background: #8b4513;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+#confirmation {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: green;
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .checkout-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .checkout-item img {
+    width: 80px;
+    height: 80px;
+  }
+}
