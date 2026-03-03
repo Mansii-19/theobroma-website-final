@@ -286,6 +286,47 @@
     </section>
 
     <script src="js/script.js"></script>
+
+    <a href="html/login.html" id="loginBtn">
+  <button>Login</button>
+</a>
+
+<a href="html/signup.html" id="signupBtn">
+  <button>Signup</button>
+</a>
+
+<button id="logoutBtn" >Logout</button>
+
+<script src="js/auth.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const loginBtn = document.getElementById("loginBtn");
+  const signupBtn = document.getElementById("signupBtn");
+  const logoutBtn = document.getElementById("logoutBtn");
+
+  const loggedInUser = localStorage.getItem("loggedInUser");
+
+  if (loggedInUser) {
+    loginBtn.style.display = "none";
+    signupBtn.style.display = "none";
+    logoutBtn.style.display = "inline-block";
+  } else {
+    loginBtn.style.display = "inline-block";
+    signupBtn.style.display = "inline-block";
+    logoutBtn.style.display = "none";
+  }
+
+  logoutBtn.addEventListener("click", function () {
+    localStorage.removeItem("loggedInUser");
+    window.location.reload();
+  });
+
+});
+</script>
+
+
 </body>
 
 </html>
